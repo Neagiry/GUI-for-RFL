@@ -5,7 +5,8 @@ executable(
 
     'src/main.vala',
     'src/application.vala',
-
+#    'src/microsettings.vala',
+    
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0'),

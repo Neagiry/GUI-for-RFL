@@ -1,0 +1,26 @@
+# ninja log v5
+1	592	1649410232440674741	com.github.neagiry.rfl@exe/src/main.c	70c27e6231a1344b
+1	592	1649410232440674741	com.github.neagiry.rfl@exe/src/application.c	70c27e6231a1344b
+1	592	1649410232440674741	com.github.neagiry.rfl@exe/src/microsettings.c	70c27e6231a1344b
+593	1045	1649410232989010963	com.github.neagiry.rfl@exe/meson-generated_src_main.c.o	9a9e65aaffb0200e
+594	1053	1649410232997015873	com.github.neagiry.rfl@exe/meson-generated_src_microsettings.c.o	f09926607e3e1f09
+593	1062	1649410233009023198	com.github.neagiry.rfl@exe/meson-generated_src_application.c.o	c2ec4046bd1a4101
+1062	1198	1649410233141103221	com.github.neagiry.rfl	a67024c0ec8d807f
+0	454	1649410762823450555	build.ninja	89b0be31ddf13932
+3	797	1649410786645274643	com.github.neagiry.rfl@exe/src/main.c	70c27e6231a1344b
+3	797	1649410786645274643	com.github.neagiry.rfl@exe/src/application.c	70c27e6231a1344b
+3	797	1649410786645274643	com.github.neagiry.rfl@exe/src/microsettings.c	70c27e6231a1344b
+797	1163	1649410793504687438	com.github.neagiry.rfl@exe/meson-generated_src_application.c.o	c2ec4046bd1a4101
+1163	1306	1649410793644675620	com.github.neagiry.rfl	a67024c0ec8d807f
+2	408	1649421337723645568	com.github.neagiry.rfl@exe/src/main.c	70c27e6231a1344b
+2	408	1649421337723645568	com.github.neagiry.rfl@exe/src/application.c	70c27e6231a1344b
+2	408	1649421337723645568	com.github.neagiry.rfl@exe/src/microsettings.c	70c27e6231a1344b
+408	641	1649421341299433966	com.github.neagiry.rfl@exe/meson-generated_src_microsettings.c.o	f09926607e3e1f09
+408	645	1649421341303433730	com.github.neagiry.rfl@exe/meson-generated_src_application.c.o	c2ec4046bd1a4101
+645	741	1649421341399428060	com.github.neagiry.rfl	a67024c0ec8d807f
+1	262	1649422974994887861	build.ninja	89b0be31ddf13932
+3	402	1649424029328754983	com.github.neagiry.rfl@exe/src/main.c	5c41a07a4198243f
+3	402	1649424029328754983	com.github.neagiry.rfl@exe/src/application.c	5c41a07a4198243f
+403	635	1649424029628757631	com.github.neagiry.rfl@exe/meson-generated_src_main.c.o	9a9e65aaffb0200e
+403	654	1649424029644757773	com.github.neagiry.rfl@exe/meson-generated_src_application.c.o	c2ec4046bd1a4101
+654	750	1649424029744758656	com.github.neagiry.rfl	a331ef3133df9fb0
