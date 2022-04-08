@@ -1,1 +1,6 @@
 /build
+.gitignore
+.gitignore~
+src/application.vala~
+src/main.vala~
+src/microsettings.vala~

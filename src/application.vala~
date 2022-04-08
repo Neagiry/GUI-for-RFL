@@ -36,3 +36,23 @@ public class Window : Gtk.ApplicationWindow {
 	}
 
 }
+
+public class TextMark : Object {
+
+	public string name {
+
+		get {
+
+		}
+
+		construct {
+
+		}
+	}
+
+	public TextMark (
+		Disk
+		false
+	);
+
+} 
