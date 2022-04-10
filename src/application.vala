@@ -66,47 +66,58 @@ public class Application : Gtk.Application {
 	
 		SelectButton.halign			=	FILL;
 		SelectButton.margin_top		=	5;
-		SelectButton.margin_start	=	10;
+		SelectButton.margin_end		=	20;
 	
-		var DeviceComboBox = new Gtk.ComboBoxText.with_entry ();
+		var DeviceComboBox = new Gtk.ComboBoxText ();
 	
-		DeviceComboBox.append_text	("Disk or ISO image (Please select)");
 		DeviceComboBox.halign		=	FILL;
 		DeviceComboBox.margin_top	=	5;
 		DeviceComboBox.margin_start	=	20;
-	
-		var DisckImage = new Gtk.ComboBox.with_entry ();
+		DeviceComboBox.margin_end	=	20;
+		DeviceComboBox.append_text	("Select Disk");
+		DeviceComboBox.append_text	("/dev/sda");
+		
+		var DisckImage = new Gtk.ComboBoxText.with_entry ();
 	
 		DisckImage.halign			=	FILL;
 		DisckImage.margin_top		=	5;
 		DisckImage.margin_start		=	20;
+		DisckImage.margin_end		=	10;
+		DisckImage.append_text	("Disk or ISO image (Please select)");
 	
 		var ValumeEntry = new Gtk.Entry ();
 	
 		ValumeEntry.halign			=	FILL;
 		ValumeEntry.margin_start	=	20;
+		ValumeEntry.margin_end		=	10;
 	
-		var FileSystemBox = new Gtk.ComboBox.with_entry ();
+		var FileSystemBox = new Gtk.ComboBoxText ();
 	
 		FileSystemBox.halign		=	FILL;
 		FileSystemBox.margin_start	=	10;
+		FileSystemBox.margin_end	=	20;
+		FileSystemBox.append_text	("NTFS (Uses WindowsOS)");
+		FileSystemBox.append_text	("FAT32 (Default)");
 	
 		var StatusBar = new Gtk.Statusbar ();
 	
 		StatusBar.halign			=	FILL;
 		StatusBar.margin_start		=	20;
+		StatusBar.margin_end		=	20;
 		StatusBar.get_context_id	("Ready");
 	
 		var StartButton = new Gtk.Button.with_label ("Start");
 	
 		StartButton.halign			=	FILL;
-		StartButton.margin_end		=	10;
+		StartButton.margin_start	=	10;
 		StartButton.margin_top		=	90;
-	
+		StartButton.margin_end		=	20;
+
 		var CloseButton = new Gtk.Button.with_label ("Close");
 	
 		CloseButton.halign			=	FILL;
 		CloseButton.margin_top		=	90;
+		CloseButton.margin_end		=	20;
 		CloseButton.clicked.connect (() => {
 			window.close ();
 		});
