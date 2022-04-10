@@ -17,8 +17,9 @@ public class Application : Gtk.Application {
 		window.resizable			=	false;
 		window.window_position		=	Gtk.WindowPosition.CENTER;
 	
-		var DriveProperties = new Gtk.Label ("Drive properties");
+		var DriveProperties = new Gtk.Label ("");
 	
+		DriveProperties.set_markup	("<big><b>Drive properties</b></big>");
 		DriveProperties.halign		=	START;
 		DriveProperties.margin		=	20;
 	
@@ -33,8 +34,9 @@ public class Application : Gtk.Application {
 		BootSelection.margin_top	=	20;
 		BootSelection.margin_start	=	20;
 	
-		var FormatOption = new Gtk.Label ("Format option");
+		var FormatOption = new Gtk.Label ("");
 	
+		FormatOption.set_markup	("<big><b>Format option</b></big>");
 		FormatOption.halign			=	START;
 		FormatOption.margin_top		=	40;
 		FormatOption.margin_start	=	20;
@@ -52,8 +54,9 @@ public class Application : Gtk.Application {
 		FileSystem.margin_bottom	=	5;
 		FileSystem.margin_start		=	10;
 	
-		var Status = new Gtk.Label ("Status");
+		var Status = new Gtk.Label ("");
 	
+		Status.set_markup	("<big><b>Status</b></big>");
 		Status.halign				=	START;
 		Status.margin_start			=	20;
 		Status.margin_top			=	40;
@@ -65,8 +68,9 @@ public class Application : Gtk.Application {
 		SelectButton.margin_top		=	5;
 		SelectButton.margin_start	=	10;
 	
-		var DeviceComboBox = new Gtk.ComboBox.with_entry ();
+		var DeviceComboBox = new Gtk.ComboBoxText.with_entry ();
 	
+		DeviceComboBox.append_text	("Disk or ISO image (Please select)");
 		DeviceComboBox.halign		=	FILL;
 		DeviceComboBox.margin_top	=	5;
 		DeviceComboBox.margin_start	=	20;
@@ -96,13 +100,12 @@ public class Application : Gtk.Application {
 		var StartButton = new Gtk.Button.with_label ("Start");
 	
 		StartButton.halign			=	FILL;
-		StartButton.margin_start	=	15;
+		StartButton.margin_end		=	10;
 		StartButton.margin_top		=	90;
 	
 		var CloseButton = new Gtk.Button.with_label ("Close");
 	
 		CloseButton.halign			=	FILL;
-		CloseButton.margin_start	=	15;
 		CloseButton.margin_top		=	90;
 		CloseButton.clicked.connect (() => {
 			window.close ();
