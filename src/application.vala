@@ -80,13 +80,10 @@ public class Application : Gtk.Application {
 		var ValumeEntry = new Gtk.Entry ();
 	
 		ValumeEntry.halign			=	FILL;
-		ValumeEntry.margin_top		=	5;
 		ValumeEntry.margin_start	=	20;
 	
 		var FileSystemBox = new Gtk.ComboBox ();
 	
-		FileSystemBox.halign		=	FILL;
-		FileSystemBox.margin_top	=	5;
 		FileSystemBox.margin_start	=	40;
 	
 		var StatusBar = new Gtk.Statusbar ();
@@ -97,36 +94,35 @@ public class Application : Gtk.Application {
 		var StartButton = new Gtk.Button.with_label ("Start");
 	
 		StartButton.halign			=	START;
-		StartButton.margin_start	=	20;
+		StartButton.margin_start	=	30;
 		StartButton.margin_top		=	90;
 	
 		var CloseButton = new Gtk.Button.with_label ("Close");
 	
 		CloseButton.halign			=	START;
-		CloseButton.margin_start	=	20;
+		CloseButton.margin_start	=	30;
 		CloseButton.margin_top		=	90;
 		CloseButton.clicked.connect (() => {
 			window.close ();
-		}
-		);
+		});
 	
 		var grid = new Gtk.Grid ();
 	
-		grid.attach (DriveProperties,	0,	0);
-		grid.attach (Devices,			0,	1);
-		grid.attach (DeviceComboBox,	0,	2);
-		grid.attach (BootSelection,		0,	3);
-		grid.attach (DisckImage,		0,	4);
-		grid.attach (SelectButton,		1,	4);
-		grid.attach (FormatOption,		0,	5);
-		grid.attach (ValumeLabel,		0,	6);
-		grid.attach (FileSystem,		1,	6);
-		grid.attach (ValumeEntry,		0,	7);
-		grid.attach (FileSystemBox,		1,	7);
-		grid.attach (Status,			0,	8);
-		grid.attach (StatusBar,			0,	9);
-		grid.attach (StartButton,		0,	10);
-		grid.attach (CloseButton,		1,	10);
+		grid.attach (DriveProperties,	0,	0,	1,	1);
+		grid.attach (Devices,			0,	1,	1,	1);
+		grid.attach (DeviceComboBox,	0,	2,	4,	1);
+		grid.attach (BootSelection,		0,	3,	1,	1);
+		grid.attach (DisckImage,		0,	4,	3,	1);
+		grid.attach (SelectButton,		3,	4,	1,	1);
+		grid.attach (FormatOption,		0,	5,	2,	1);
+		grid.attach (ValumeLabel,		0,	6,	2,	1);
+		grid.attach (FileSystem,		2,	6,	2,	1);
+		grid.attach (ValumeEntry,		0,	7,	2,	1);
+		grid.attach (FileSystemBox,		2,	7,	2,	1);
+		grid.attach (Status,			0,	8,	1,	1);
+		grid.attach (StatusBar,			0,	9,	4,	1);
+		grid.attach (StartButton,		2,	10,	1,	1);
+		grid.attach (CloseButton,		3,	10,	1,	1);
 	
 		window.child = grid;
 		window.show_all ();
