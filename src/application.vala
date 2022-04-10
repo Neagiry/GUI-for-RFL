@@ -50,7 +50,7 @@ public class Application : Gtk.Application {
 	
 		FileSystem.halign			=	START;
 		FileSystem.margin_bottom	=	5;
-		FileSystem.margin_start		=	40;
+		FileSystem.margin_start		=	10;
 	
 		var Status = new Gtk.Label ("Status");
 	
@@ -63,15 +63,15 @@ public class Application : Gtk.Application {
 	
 		SelectButton.halign			=	FILL;
 		SelectButton.margin_top		=	5;
-		SelectButton.margin_start	=	50;
+		SelectButton.margin_start	=	10;
 	
-		var DeviceComboBox = new Gtk.ComboBox ();
+		var DeviceComboBox = new Gtk.ComboBox.with_entry ();
 	
 		DeviceComboBox.halign		=	FILL;
 		DeviceComboBox.margin_top	=	5;
 		DeviceComboBox.margin_start	=	20;
 	
-		var DisckImage = new Gtk.ComboBox ();
+		var DisckImage = new Gtk.ComboBox.with_entry ();
 	
 		DisckImage.halign			=	FILL;
 		DisckImage.margin_top		=	5;
@@ -82,25 +82,27 @@ public class Application : Gtk.Application {
 		ValumeEntry.halign			=	FILL;
 		ValumeEntry.margin_start	=	20;
 	
-		var FileSystemBox = new Gtk.ComboBox ();
+		var FileSystemBox = new Gtk.ComboBox.with_entry ();
 	
-		FileSystemBox.margin_start	=	40;
+		FileSystemBox.halign		=	FILL;
+		FileSystemBox.margin_start	=	10;
 	
 		var StatusBar = new Gtk.Statusbar ();
 	
 		StatusBar.halign			=	FILL;
 		StatusBar.margin_start		=	20;
+		StatusBar.get_context_id	("Ready");
 	
 		var StartButton = new Gtk.Button.with_label ("Start");
 	
-		StartButton.halign			=	START;
-		StartButton.margin_start	=	30;
+		StartButton.halign			=	FILL;
+		StartButton.margin_start	=	15;
 		StartButton.margin_top		=	90;
 	
 		var CloseButton = new Gtk.Button.with_label ("Close");
 	
-		CloseButton.halign			=	START;
-		CloseButton.margin_start	=	30;
+		CloseButton.halign			=	FILL;
+		CloseButton.margin_start	=	15;
 		CloseButton.margin_top		=	90;
 		CloseButton.clicked.connect (() => {
 			window.close ();
@@ -114,9 +116,9 @@ public class Application : Gtk.Application {
 		grid.attach (BootSelection,		0,	3,	1,	1);
 		grid.attach (DisckImage,		0,	4,	3,	1);
 		grid.attach (SelectButton,		3,	4,	1,	1);
-		grid.attach (FormatOption,		0,	5,	2,	1);
-		grid.attach (ValumeLabel,		0,	6,	2,	1);
-		grid.attach (FileSystem,		2,	6,	2,	1);
+		grid.attach (FormatOption,		0,	5,	1,	1);
+		grid.attach (ValumeLabel,		0,	6,	1,	1);
+		grid.attach (FileSystem,		2,	6,	1,	1);
 		grid.attach (ValumeEntry,		0,	7,	2,	1);
 		grid.attach (FileSystemBox,		2,	7,	2,	1);
 		grid.attach (Status,			0,	8,	1,	1);
