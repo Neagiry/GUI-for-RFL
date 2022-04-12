@@ -27,24 +27,17 @@ public class Window : Gtk.ApplicationWindow {
 			Devices.halign					=	START;
 			Devices.margin_top				=	10;
 
-		var DevicesBox = new Gtk.ComboBoxText ();
+		var DevicesBox = new Gtk.FileChooserButton ("Select Diskt",SELECT_FOLDER);
 
 			DevicesBox.halign				=	FILL;
-			DevicesBox.append_text			("Select Disk");
-			DevicesBox.append_text			("/dev/sda");
 
 		var BootSelection = new Gtk.Label ("Boot selection");
 
 			BootSelection.halign			=	START;
 
-		var BootSelectionBox = new Gtk.ComboBoxText.with_entry ();
+		var BootSelectionBox = new Gtk.FileChooserButton ("Select Diskt",OPEN);
 
 			BootSelectionBox.halign			=	FILL;
-			BootSelectionBox.append_text	("Disk or ISO image (Please select)");
-
-		var SelectButton = new Gtk.Button.with_label ("Select");
-
-			SelectButton.halign				=	FILL;
 
 		var PartitionScheme = new Gtk.Label ("Partition scheme");
 
@@ -65,14 +58,17 @@ public class Window : Gtk.ApplicationWindow {
 			TargetSystemBox.halign			=	FILL;
 			TargetSystemBox.append_text		("BIOS or UEFI");
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 		var FormatOption = new Gtk.Label ("");
 
-			FormatOption.set_markup			("<big><b>Format option</b></big>");
 			FormatOption.halign				=	START;
+			FormatOption.margin_top			=	10;
+			FormatOption.set_markup			("<big><b>Format option</b></big>");
 
 		var FormatOptionSeparator = new Gtk.Separator (HORIZONTAL);
 
-			FormatOptionSeparator.margin_top		=	10;
+			FormatOptionSeparator.margin_top		=	20;
 
 		var ValumeLabel = new Gtk.Label ("Valume label");
 
@@ -101,18 +97,22 @@ public class Window : Gtk.ApplicationWindow {
 			FileSystemBox.append_text		("FAT32 (Default)");
 			FileSystemBox.append_text		("NTFS (Uses WindowsOS)");
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 		var Status = new Gtk.Label ("");
 
 			Status.halign					=	START;
+			Status.margin_top				=	10;
 			Status.set_markup				("<big><b>Status</b></big>");
 
 		var StatusSeparator = new Gtk.Separator (HORIZONTAL);
 
-			StatusSeparator.margin_top		=	10;
+			StatusSeparator.margin_top		=	20;
 
 		var StatusBar = new Gtk.ProgressBar ();
 
 			StatusBar.halign				=	FILL;
+			StatusBar.margin_top			=	60;
 
 		var StartButton = new Gtk.Button.with_label ("Start");
 
@@ -125,16 +125,15 @@ public class Window : Gtk.ApplicationWindow {
 		var grid = new Gtk.Grid ();
 
 			grid.margin							=	20;
-			grid.row_spacing					=	10;
 			grid.column_spacing					=	20;
+			grid.row_spacing					=	10;
 
 			grid.attach			(DriveProperties,		0,	0,	1,	1);
 			grid.attach_next_to (DriveSeparator,		DriveProperties,	Gtk.PositionType.RIGHT,		3,	1);
 			grid.attach_next_to (Devices,				DriveProperties,	Gtk.PositionType.BOTTOM,	1,	1);
 			grid.attach_next_to (DevicesBox,			Devices,			Gtk.PositionType.BOTTOM,	4,	1);
 			grid.attach_next_to (BootSelection,			DevicesBox,			Gtk.PositionType.BOTTOM,	1,	1);
-			grid.attach_next_to (BootSelectionBox,		BootSelection,		Gtk.PositionType.BOTTOM,	3,	1);
-			grid.attach_next_to (SelectButton,			BootSelectionBox,	Gtk.PositionType.RIGHT,		1,	1);
+			grid.attach_next_to (BootSelectionBox,		BootSelection,		Gtk.PositionType.BOTTOM,	4,	1);
 			grid.attach_next_to (PartitionScheme,		BootSelectionBox,	Gtk.PositionType.BOTTOM,	2,	1);
 			grid.attach_next_to (PartitionSchemeBox,	PartitionScheme,	Gtk.PositionType.BOTTOM,	2,	1);
 			grid.attach_next_to	(TargetSystem,			PartitionScheme,	Gtk.PositionType.RIGHT,		1,	1);
